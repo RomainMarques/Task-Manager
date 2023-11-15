@@ -1,4 +1,4 @@
-package org.example;
+package com.taskmanager.process;
 
 public class Task {
     private String description;

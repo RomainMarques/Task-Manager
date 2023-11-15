@@ -1,6 +1,7 @@
-import org.example.Parser;
-import org.example.Stack;
-import org.example.Task;
+package com.taskmanager.util;
+
+import com.taskmanager.process.Stack;
+import com.taskmanager.process.Task;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 

@@ -1,4 +1,6 @@
-import org.example.Task;
+package com.taskmanager.process;
+
+import com.taskmanager.process.Task;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 

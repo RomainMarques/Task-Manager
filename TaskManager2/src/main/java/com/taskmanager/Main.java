@@ -1,4 +1,7 @@
-package org.example;
+package com.taskmanager;
+
+import com.taskmanager.process.Stack;
+import com.taskmanager.util.Parser;
 
 import java.util.Scanner;
 
