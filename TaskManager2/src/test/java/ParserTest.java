@@ -40,6 +40,15 @@ public class ParserTest {
         Assertions.assertTrue(stack.getTask(0).isDone());
     }
 
-    
+    @Test
+    public void testUpdateTaskToToDo() {
+        Stack stack = new Stack();
+        String input = "o 0";
+        Task task = new Task("Test");
+
+        Parser.analyseLine(input, stack);
+
+        Assertions.assertFalse(stack.getTask(0).isDone());
+    }
 
 }
