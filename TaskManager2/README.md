@@ -46,7 +46,7 @@ Bye!
 
 1.  Parse user input (+, -, x, o, q)
 
-*Note: by parser, we mean a function that takes a strring and
+*Note: by parser, we mean a function that takes a string and
 returns something that is *not* a string. For instance, a command,
 a list of tokens, ...*
 
