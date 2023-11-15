@@ -12,4 +12,15 @@ public class StackTest {
 
         Assertions.assertEquals(task, stack.getTask(0));
     }
+
+    @Test
+    public void testRemoveFromStackAndWrongId() {
+        Task task = new Task("Description");
+        Stack stack = new Stack();
+        stack.addTask(task);
+        stack.removeTask(0);
+
+        // we remove the element of the list and checks that it throws an error bcs the list is empty
+        Assertions.assertThrows(IndexOutOfBoundsException.class, () -> stack.removeTask(0));
+    }
 }
