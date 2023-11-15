@@ -29,7 +29,8 @@ public class ParserTest {
         Assertions.assertTrue(stack.isEmpty());
     }
 
-        @Test public void testUpdateTaskToDone() {
+    @Test
+    public void testUpdateTaskToDone() {
         Stack stack = new Stack();
         String input = "x 0";
         Task task = new Task("Test");
@@ -38,4 +39,7 @@ public class ParserTest {
 
         Assertions.assertTrue(stack.getTask(0).isDone());
     }
+
+    
+
 }
