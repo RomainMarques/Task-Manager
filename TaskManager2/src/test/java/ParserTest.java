@@ -28,4 +28,14 @@ public class ParserTest {
 
         Assertions.assertTrue(stack.isEmpty());
     }
+
+        @Test public void testUpdateTaskToDone() {
+        Stack stack = new Stack();
+        String input = "x 0";
+        Task task = new Task("Test");
+
+        Parser.analyseLine(input, stack);
+
+        Assertions.assertTrue(stack.getTask(0).isDone());
+    }
 }
