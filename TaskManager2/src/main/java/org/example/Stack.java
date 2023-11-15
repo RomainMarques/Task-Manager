@@ -17,4 +17,8 @@ public class Stack {
     public Task getTask(int id) {
         return tasks.get(id); // id = index
     }
+
+    public void removeTask(int id) {
+        tasks.remove(id);
+    }
 }
