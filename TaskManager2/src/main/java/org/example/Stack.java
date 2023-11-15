@@ -10,6 +10,19 @@ public class Stack {
         tasks = new ArrayList<>();
     }
 
+    public void displayTasks() {
+        System.out.println("Tasks list: ");
+        if(!isEmpty()) {
+            for (int i = 0; i < tasks.size(); i++) {
+                String out = " " + i + " [";
+                out += tasks.get(i).isDone() ? "x]" : " ] ";
+                System.out.println(out + " " + tasks.get(i).getDescription());
+            }
+        } else {
+            System.out.println("No task yet");
+        }
+    }
+    
     public void addTask(Task t) {
         tasks.add(t);
     }
@@ -22,5 +35,5 @@ public class Stack {
         tasks.remove(id);
     }
 
-    public boolean isEmpty() { return tasks.isEmpty();}
+    public boolean isEmpty() { return tasks.isEmpty(); }
 }

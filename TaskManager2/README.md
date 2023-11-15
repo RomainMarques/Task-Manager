@@ -13,7 +13,7 @@ Each task is made of
 The task manager must start an interaction loop where the user can enter
 some commands, like this:
 
-* `+ description>` Add a task
+* `+ <description>` Add a task
 * `- <id>` Remove the task matching the given id
 * `x <id>` Set the status of the task matching the id to "done"
 * `o <id>` Set the status of the task matching the id to "to do"

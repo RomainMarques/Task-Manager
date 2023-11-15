@@ -14,12 +14,7 @@ public class Parser {
                     int id = Integer.parseInt(userInput[1]);
                     stack.removeTask(id);
                 } catch (Exception e) {
-                    if (e instanceof NumberFormatException)
-                        System.out.println("Wrong string given");
-                    else if (e instanceof IndexOutOfBoundsException)
-                        System.out.println("ID given is not in the tasks list");
-                    else
-                        System.out.println("Unexpected error occurred");
+                    raiseExceptionMessages(e);
                 }
             }
             case "x" -> {
@@ -27,12 +22,7 @@ public class Parser {
                     int id = Integer.parseInt(userInput[1]);
                     stack.getTask(id).setTaskDone();
                 } catch (Exception e) {
-                    if (e instanceof NumberFormatException)
-                        System.out.println("Wrong string given");
-                    else if (e instanceof IndexOutOfBoundsException)
-                        System.out.println("ID given is not in the tasks list");
-                    else
-                        System.out.println("Unexpected error occurred");
+                    raiseExceptionMessages(e);
                 }
             }
             case "o" -> {
@@ -40,17 +30,23 @@ public class Parser {
                     int id = Integer.parseInt(userInput[1]);
                     stack.getTask(id).setTaskToDo();
                 } catch (Exception e) {
-                    if (e instanceof NumberFormatException)
-                        System.out.println("Wrong string given");
-                    else if (e instanceof IndexOutOfBoundsException)
-                        System.out.println("ID given is not in the tasks list");
-                    else
-                        System.out.println("Unexpected error occurred");
+                    raiseExceptionMessages(e);
                 }
             }
-            default -> System.out.println("No character match.");
+            case "q" -> exitApplication = true;
+            default -> System.out.println("Error: No character match");
         }
 
         return exitApplication;
+    }
+
+    private static void raiseExceptionMessages(Exception e) {
+        System.out.print("Error: ");
+        if (e instanceof NumberFormatException)
+            System.out.println("Wrong string given");
+        else if (e instanceof IndexOutOfBoundsException)
+            System.out.println("ID given is not in the tasks list");
+        else
+            System.out.println("Unexpected error occurred");
     }
 }
