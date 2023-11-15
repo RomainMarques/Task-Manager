@@ -5,19 +5,12 @@ import org.junit.jupiter.api.Test;
 public class TaskTest {
     @Test
     public void testCreationTask() {
-        String expected = "Test Description";
-        Task task = new Task(expected);
+        String expectedDescription = "Test Description";
+        Task task = new Task(expectedDescription);
+        boolean expectedState = false;
 
-        Assertions.assertEquals(expected, task.getDescription());
-    }
-
-    @Test
-    public void testInitialStateTask() {
-        String description = "Test Description";
-        Task task = new Task(description);
-        boolean expected = false;
-
-        Assertions.assertEquals(expected, task.isDone());
+        Assertions.assertEquals(expectedDescription, task.getDescription());
+        Assertions.assertEquals(expectedState, task.isDone());
     }
 
     @Test
