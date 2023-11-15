@@ -34,6 +34,7 @@ public class ParserTest {
         Stack stack = new Stack();
         String input = "x 0";
         Task task = new Task("Test");
+        stack.addTask(task);
 
         Parser.analyseLine(input, stack);
 
@@ -45,6 +46,7 @@ public class ParserTest {
         Stack stack = new Stack();
         String input = "o 0";
         Task task = new Task("Test");
+        stack.addTask(task);
 
         Parser.analyseLine(input, stack);
 
