@@ -1,3 +1,4 @@
+import org.example.Stack;
 import org.example.Task;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
@@ -7,7 +8,7 @@ public class StackTest {
     public void testAddStack() {
         Task task = new Task("Description");
         Stack stack = new Stack();
-        stack.add(task);
+        stack.addTask(task);
 
         Assertions.assertEquals(task, stack.getTask(0));
     }
