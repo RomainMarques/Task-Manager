@@ -1,5 +1,6 @@
 import org.example.Parser;
 import org.example.Stack;
+import org.example.Task;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
@@ -14,5 +15,17 @@ public class ParserTest {
         Parser.analyseLine(input, stack); // input = user input
 
         Assertions.assertEquals(descr, stack.getTask(0).getDescription());
+    }
+
+    @Test
+    public void testRemoveTask() {
+        Stack stack = new Stack();
+        String input = "- 0";
+        Task task = new Task("Test");
+
+        stack.addTask(task);
+        Parser.analyseLine(input, stack);
+
+        Assertions.assertTrue(stack.isEmpty());
     }
 }

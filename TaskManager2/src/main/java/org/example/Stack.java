@@ -21,4 +21,6 @@ public class Stack {
     public void removeTask(int id) {
         tasks.remove(id);
     }
+
+    public boolean isEmpty() { return tasks.isEmpty();}
 }
